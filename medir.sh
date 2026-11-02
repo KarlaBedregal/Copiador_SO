@@ -10,6 +10,8 @@
 # Tambien repite el bloque de 64K sin fsync para ver cuanto cuesta la persistencia,
 # y mide la copia sola (sin hash ni fsync) para ver el efecto del tamano de bloque.
 set -euo pipefail
+# Formato numerico con punto decimal (si el sistema esta en espanol, awk usaria coma y leeria mal los tiempos)
+export LC_ALL=C
 
 TAM_MB=${1:-128}
 REPS=${2:-3}
