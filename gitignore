@@ -1,0 +1,4 @@
+bin/
+resultados/
+demo/
+*.o
